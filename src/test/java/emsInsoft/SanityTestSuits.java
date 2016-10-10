@@ -30,11 +30,11 @@ public class SanityTestSuits extends BaseTest{
     public void checkoutTest(){
         registerEmployee reg = new registerEmployee();
     }
-    @Test
-    public void regCheck() throws InterruptedException {
-        registerEmployee reg = new registerEmployee();
-        reg.register();
-    }
+//    @Test
+//    public void regCheck() throws InterruptedException {
+//        registerEmployee reg = new registerEmployee();
+//        reg.register();
+//    }
     @Test
     public void statusDepartCheck() throws InterruptedException {
         DepActive  dep  = new DepActive();
