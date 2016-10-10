@@ -24,6 +24,12 @@ public class SanityTestSuits extends BaseTest{
         Assert.assertEquals(new newDepartment().newAddDepartment(),"Submitted successfully");
 
     }
+
+
+    @Test
+    public void checkoutTest(){
+        registerEmployee reg = new registerEmployee();
+    }
     @Test
     public void regCheck() throws InterruptedException {
         registerEmployee reg = new registerEmployee();
