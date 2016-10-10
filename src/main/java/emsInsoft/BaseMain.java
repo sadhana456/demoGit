@@ -1,6 +1,7 @@
 package emsInsoft;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -32,6 +33,11 @@ public class BaseMain {
             ChromeDriverManager.getInstance().setup();
             driver = new ChromeDriver();
         }
+        else if (browser.equalsIgnoreCase("ie")) {
+            InternetExplorerDriverManager.getInstance().setup();
+            driver = new ChromeDriver();
+        }
+
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
