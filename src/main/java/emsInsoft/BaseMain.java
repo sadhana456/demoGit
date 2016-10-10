@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.InternetExplorerDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -36,6 +37,10 @@ public class BaseMain {
         else if (browser.equalsIgnoreCase("ie")) {
             InternetExplorerDriverManager.getInstance().setup();
             driver = new ChromeDriver();
+        }
+        else if (browser.equalsIgnoreCase("Safari")) {
+            InternetExplorerDriverManager.getInstance().setup();
+            driver = new SafariDriver();
         }
 
         driver.get(url);
